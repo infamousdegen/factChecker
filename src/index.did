@@ -8,5 +8,6 @@ service : () -> {
   queryFactoOrNot : (nat) -> (_AzleResult_1) query;
   registerYourself : () -> (_AzleResult);
   updateData : (nat) -> (_AzleResult);
-  vote : (nat, text) -> (_AzleResult);
+  vote : (nat, text, text) -> (_AzleResult);
+  withdrawForUser : (nat64) -> (_AzleResult);
 }
