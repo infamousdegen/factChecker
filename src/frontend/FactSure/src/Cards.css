@@ -1,0 +1,12 @@
+.Cards{
+    width:100%;
+    height:350px;
+    
+}
+
+.cards-1{
+    display:flex;
+    justify-content:space-between;
+    padding-left:35px;
+    padding-right:35px;
+}

@@ -1,0 +1,83 @@
+.fact-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 90vh;
+  }
+  
+  .fact-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: -46px;
+  }
+  
+  .left-content {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .right-content {
+    flex: 1;
+    margin-left: 20px;
+  }
+  
+  .fact-link {
+    margin-bottom: 10px;
+  }
+  
+  .fact-card {
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+  }
+  
+  .fact-card h3 {
+    margin-top: 0;
+  }
+  
+  .fact-card p {
+    margin-bottom: 5px;
+  }
+  
+  .fact-card button {
+    margin-right: 10px;
+  }
+
+  .justification {
+    width: 100%;
+    max-width: 400px;
+    padding: 11px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    margin: 20px;
+    margin-left: -260px;
+
+  }
+
+  .submit-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #4caf50;
+    color: white;
+    border: 2px solid #91111100;
+    cursor: pointer;
+    width: fit-content; 
+  }
+  
+  .cant {
+    margin:5px;
+  }
+
+  .pf {
+    margin-right: -1215px;
+    margin-top: -130px;
+    font-size: 24px;
+  }

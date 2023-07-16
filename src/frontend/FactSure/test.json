@@ -1,0 +1,53 @@
+[{
+    "marketId": 1,
+    "marketTitle": "Will it rain tomorrow?",
+    "marketDescription": "This market predicts if it will rain tomorrow in a specific location.",
+    "marketAddress": "9qjrg-4ztgc-w5cmz-oit67-vilid-d5vlf-v5g4g-4d3eb"
+},{
+    "marketId": 2,
+    "marketTitle": "Which team will win the championship?",
+    "marketDescription": "This market predicts the winning team of a sports championship.",
+    "marketAddress": "sjy3u-dswcn-rbcbb-ocmlu-ta2kw-jnuev-c3kgg-4d3eb"
+},{
+    "marketId": 3,
+    "marketTitle": "What will be the closing price of Bitcoin?",
+    "marketDescription": "This market predicts the closing price of Bitcoin on a specific date.",
+    "marketAddress": "9qpa5-vqxkm-4vzbb-hpmxz-4lzwn-i3rhn-m5cve-4d3eb"
+},{
+    "marketId": 4,
+    "marketTitle": "Who will win the Best Actor award at the Oscars?",
+    "marketDescription": "This market predicts the winner of the Best Actor category at the Oscars.",
+    "marketAddress": "tpem3-vyweq-w2c6m-sbkgh-y3z25-hgky2-hfj7v-4d3eb"
+},{
+    "marketId": 5,
+    "marketTitle": "Will the stock market go up next week?",
+    "marketDescription": "This market predicts the direction of the stock market next week.",
+    "marketAddress": "tzcbi-mwjw2-pxy5f-kftok-ja2ei-7fe7y-i3tve-4d3eb"
+},{
+    "marketId": 6,
+    "marketTitle": "Which country will host the next Olympic Games?",
+    "marketDescription": "This market predicts the host country of the next Olympic ,Games.",
+    "marketAddress": "xkbz2-kdmiw-rhwwk-lzmbh-zd7ej-ixhzi-cxr3q-4d3eb"
+},{
+    "marketId": 7,
+    "marketTitle": "Will the new product be successful in the market?",
+    "marketDescription": "This market predicts the success of a new product in the market.",
+    "marketAddress": "bbgg4-4hjge-rhmfw-xbhlf-y3a4d-pgmtr-lmdwi-4d3eb"
+},{
+    "marketId": 8,
+    "marketTitle": "Who will win the Nobel Prize in Literature?",
+    "marketDescription": "This market predicts the winner of the Nobel Prize in Literature.",
+    "marketAddress": "imx7v-r5n2f-cwn5e-4iyfo-c7j5e-xawyr-qbnva-4d3eb"
+},{
+    "marketId": 9,
+    "marketTitle": "What will be the outcome of the next election?",
+    "marketDescription": "This market predicts the outcome of the upcoming election.",
+    "marketAddress": "qzy5g-zcpmv-jvwwc-vnlmj-wz3go-tfsaz-75tsa-4d3eb"
+},{
+    "marketId": 10,
+    "marketTitle": "Will the new restaurant become popular?",
+    "marketDescription": "This market predicts the popularity of a newly opened restaurant.",
+    "marketAddress": "gshx2-rq42q-ixzrb-o5nw3-yk6p4-6hgbx-wrpr2-4d3eb"
+}
+
+]
