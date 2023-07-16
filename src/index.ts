@@ -6,6 +6,10 @@ type registerMetadata = Record<{
     id:nat,
     Address:Principal,
     deactivated:boolean
+    voteHistory:Vec<Record<{
+        _marketId:nat
+        _voteHistory:Opt<string>
+    }>>
 }>
 
 
@@ -32,6 +36,8 @@ let ID:nat = 0n
 
 const storageValue = new StableBTreeMap<nat, payload>(0, 44, 1024);
 const registerUsers = new StableBTreeMap<Principal, registerMetadata>(1, 44, 1024);
+
+
 
 
 const depositModuleCanister = new DepositModule(
@@ -115,9 +121,11 @@ export function queryFactoOrNot(_marketId:nat) :Result<string,string> {
     }))
 }
 
+//@todo: deposit 
+
 $update;
 export function registerYourself():Result<boolean,string>{
-    let updatedMessage = {id:ID,deactivated:false,Address:ic.caller()}
+    let updatedMessage = {id:ID,deactivated:false,Address:ic.caller(),voteHistory:[]}
     registerUsers.insert(ic.caller(),updatedMessage)
     return Result.Ok<boolean,string>(true)
 }
@@ -172,22 +180,44 @@ export function vote(_marketId:nat,factType:string):Result<boolean,string> {
     })
 
     if(value === true){
+        const registerValue = match(registerUsers.get(ic.caller()),{
+            Some: (arg) => {
+    
+                return arg
+            },
+            None:() => {
+                ic.trap("registed user not found")
+            }
+        })
+        
         if(factType === 'TRUE'){
             let currentvalue = currentMessage.trueCounter + 1n
             let updatedMessage:payload = {...currentMessage,trueCounter:currentvalue}
             storageValue.insert(_marketId,updatedMessage)
+            registerValue.voteHistory.push({_marketId:_marketId,_voteHistory:Opt.Some('TRUE')})
+
+            let userUpdatedMessage = {...registerValue,voteHistory:registerValue.voteHistory}
+            registerUsers.insert(ic.caller(),userUpdatedMessage)
             return Result.Ok<boolean,string>(true)
         }
         else if(factType === 'FALSE'){
             let currentvalue = currentMessage.falseCounter + 1n
             let updatedMessage:payload = {...currentMessage,falseCounter:currentvalue}
             storageValue.insert(_marketId,updatedMessage)
+            registerValue.voteHistory.push({_marketId:_marketId,_voteHistory:Opt.Some('FALSE')})
+
+            let userUpdatedMessage = {...registerValue,voteHistory:registerValue.voteHistory}
+            registerUsers.insert(ic.caller(),userUpdatedMessage)
             return Result.Ok<boolean,string>(true)
         }
         else if(factType === 'UNDETERMINED'){
             let currentvalue = currentMessage.undeterminedCounter + 1n
             let updatedMessage:payload = {...currentMessage,undeterminedCounter:currentvalue}
             storageValue.insert(_marketId,updatedMessage)
+            registerValue.voteHistory.push({_marketId:_marketId,_voteHistory:Opt.Some('UNDETERMINED')})
+
+            let userUpdatedMessage = {...registerValue,voteHistory:registerValue.voteHistory}
+            registerUsers.insert(ic.caller(),userUpdatedMessage)
             return Result.Ok<boolean,string>(true)
         }
         else{
